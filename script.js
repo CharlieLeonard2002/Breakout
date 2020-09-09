@@ -1,3 +1,9 @@
+var balX = 50;
+var balY = 50;
+
+var SpeedX = 6;
+var SpeedY = 3;
+
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -6,9 +12,6 @@
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
-
-  // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
 }
 
 
@@ -21,6 +24,19 @@ function draw() {
   // stel vulkleur in
   fill(100, 100, 255);
 
+ // Kleur de achtergrond blauw, zodat je het kunt zien
+  background('blue');
+
   // teken een cirkel
-  ellipse(50,50,80,80);
+  ellipse(balX,balY,80,80);
+
+  balX = balX + SpeedX;
+  balY = balY + SpeedY;
+
+  if(balX >= 1280) {
+      SpeedX = Speedx * -1;
+      
+  }
+ if(balY >= 720)
+  SpeedY 
 }
